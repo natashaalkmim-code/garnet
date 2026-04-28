@@ -434,51 +434,56 @@ transition:opacity .3s ease;  }
   .footer-socials svg{width:16px;height:16px;fill:#fff;}
 
   /* ---- RESPONSIVE ---- */
-  @media (max-width: 720px){
-    .hero-frame{aspect-ratio::after{
-    height:35%; /* aumenta no mobile */
-    
-    background:linear-gradient(
-      to bottom,
-      rgba(255,255,255,0) 0%,
-      rgba(255,255,255,0.8) 55%,
-      #ffffff 100%
-    );
+ @media (max-width: 720px){
+  .hero-frame{
+    aspect-ratio:4 / 5;
+    max-height:none;
   }
 
-}
-    .nav-inner{padding:22px 24px;}
-    .nav-logo{font-size:24px;}
-    .nav-links{gap:14px; font-size:12px;}
-    .oracle{padding:60px 20px 70px;}
-    .oracle-stage{height:280px;}
-.card{width:108px; height:168px;}
-    .card[data-index="0"]{
-  --rest: translateX(-70px) rotate(-10deg) !important;
-}
-
-.card[data-index="1"]{
-  --rest: translateX(0) rotate(0deg) !important;
-}
-
-.card[data-index="2"]{
-  --rest: translateX(80px) rotate(10deg) !important;
-}
-    .card-emoji{font-size:34px; margin-bottom:6px;}
-    .card-name{font-size:11px;}
-    .card-msg{font-size:8.5px; line-height:1.35;}
-    .live{padding:0;}
-    .live-img{aspect-ratio: 16/10;}
-    .live-bio{font-size:15px; padding:0 24px;}
-    .updates{padding:60px 20px 80px;}
-    .updates-list{padding:0 16px;}
-    .update-row{grid-template-columns:74px 1fr; gap:18px;}
-    .footer-row{
-      padding:0 20px;
-    }
-    .footer-logo-row{padding:0 20px;}
-    .footer-logo-wrap{width:260px;}
+  .hero-frame::after{
+    height:35%;
   }
+
+  .nav-inner{padding:22px 24px;}
+  .nav-logo{font-size:24px;}
+  .nav-links{gap:14px; font-size:12px;}
+
+  .oracle{padding:60px 20px 70px;}
+  .oracle-stage{height:250px;}
+
+  .card{
+    width:108px;
+    height:168px;
+  }
+
+  .card[data-index="0"]{
+    --rest: translateX(-45px) rotate(-9deg) !important;
+  }
+
+  .card[data-index="1"]{
+    --rest: translateX(0) rotate(0deg) !important;
+  }
+
+  .card[data-index="2"]{
+    --rest: translateX(45px) rotate(9deg) !important;
+  }
+
+  .card-emoji{font-size:34px; margin-bottom:6px;}
+  .card-name{font-size:11px;}
+  .card-msg{font-size:8.5px; line-height:1.35;}
+
+  .live{padding:0;}
+  .live-img{aspect-ratio:16/10;}
+  .live-bio{font-size:15px; padding:0 24px;}
+
+  .updates{padding:60px 20px 80px;}
+  .updates-list{padding:0 16px;}
+  .update-row{grid-template-columns:74px 1fr; gap:18px;}
+
+  .footer-row{padding:0 20px;}
+  .footer-logo-row{padding:0 20px;}
+  .footer-logo-wrap{width:260px;}
+}
 </style>
 </head>
 <body>
