@@ -46,7 +46,14 @@
 }
 
   .hero-frame::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+
   height:16%;
+  pointer-events:none;
 
   background:linear-gradient(
     to bottom,
@@ -54,13 +61,6 @@
     rgba(255,255,255,0.9) 35%,
     #ffffff 100%
   );
-}
-
-.hero-photo{
-  width:100%;
-  height:auto; /* ESSENCIAL: mantém a imagem inteira */
-  display:block;
-  object-fit:contain; /* garante que não corta */
 }
 
   /* ---- NAV (sem linha embaixo) ---- */
