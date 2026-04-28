@@ -510,7 +510,7 @@ transition:opacity .3s ease;  }
   <div class="oracle-stage">
     <div class="card-deck" id="deck">
 
-      <div class="card" data-index="0" style="--rest: translateX(-170px) rotate(-12deg);">
+      <div class="card" data-index="0" style="--rest-desktop: translateX(-170px) rotate(-12deg); --rest-mobile: translateX(-35px) rotate(-9deg);"
         <div class="card-inner">
           <div class="card-face card-back">
             <img class="eye-img" src="images/olho.png" alt=""> </div>
@@ -523,7 +523,7 @@ transition:opacity .3s ease;  }
         </div>
       </div>
 
-      <div class="card" data-index="1" style="--rest: translateX(0) rotate(0deg);">
+      <div class="card" data-index="1" style="--rest-desktop: translateX(0) rotate(0deg); --rest-mobile: translateX(0) rotate(0deg);"
         <div class="card-inner">
           <div class="card-face card-back">
             <img class="eye-img" src="images/olho.png" alt="">
@@ -537,7 +537,7 @@ transition:opacity .3s ease;  }
         </div>
       </div>
 
-      <div class="card" data-index="2" style="--rest: translateX(170px) rotate(12deg);">
+      <div class="card" data-index="2" style="--rest-desktop: translateX(170px) rotate(12deg); --rest-mobile: translateX(35px) rotate(9deg);"
         <div class="card-inner">
           <div class="card-face card-back">
             <img class="eye-img" src="images/olho.png" alt="">
@@ -627,8 +627,9 @@ transition:opacity .3s ease;  }
   const status = document.getElementById("status");
 
   cards.forEach(c => {
-    const rest = c.style.getPropertyValue("--rest");
-    c.style.transform = rest;
+const rest = window.innerWidth <= 720
+  ? c.style.getPropertyValue("--rest-mobile")
+  : c.style.getPropertyValue("--rest-desktop");    c.style.transform = rest;
   });
 
   function todayKey(){
@@ -669,8 +670,9 @@ card.classList.add("flipped");    } else {
     cards.forEach(other => {
       if(other !== card){
         other.classList.add("disabled");
-        const rest = other.style.getPropertyValue("--rest");
-        other.style.transform = rest + " translateY(8px) scale(.92)";
+const rest = window.innerWidth <= 720
+  ? other.style.getPropertyValue("--rest-mobile")
+  : other.style.getPropertyValue("--rest-desktop");        other.style.transform = rest + " translateY(8px) scale(.92)";
       }
     });
     status.classList.add("live");
