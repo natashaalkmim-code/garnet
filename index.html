@@ -479,7 +479,7 @@ transition:opacity .3s ease;  }
     --rest: translateX(45px) rotate(9deg) !important;
   }
 
-  .card-emoji{font-size:34px; margin-bottom:6px;}
+  .card-emoji{font-size:24px; margin-bottom:6px;}
   .card-name{font-size:11px;}
   .card-msg{font-size:8.5px; line-height:1.35;}
 
@@ -671,10 +671,8 @@ const rest = window.innerWidth <= 720
     return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
   }
   function pickForDay(){
-    const key = todayKey();
-    let h = 0;
-    for (let i=0;i<key.length;i++) h = (h*31 + key.charCodeAt(i)) >>> 0;
-    return TAROT[h % TAROT.length];
+  return TAROT[Math.floor(Math.random() * TAROT.length)];
+}
   }
   function loadState(){
     try{
