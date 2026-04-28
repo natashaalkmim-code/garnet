@@ -443,23 +443,35 @@ transition:opacity .3s ease;  }
   height:28%;
   pointer-events:none;
 
+ .footer::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:80px;
+  pointer-events:none;
+
   background:linear-gradient(
-    to top,
-    rgba(238,48,24,0) 0%,
-    rgba(238,48,24,0.7) 60%,
+    to bottom,
+    #ffffff 0%,
+    rgba(238,48,24,0.4) 60%,
     rgba(238,48,24,1) 100%
   );
 }
-
-  /* ---- RESPONSIVE ---- */
-  @media (max-width: 720px){
-.hero-frame{
-  aspect-ratio:4 / 5;
-  max-height:none;
 }
 
-.hero-frame::after{    height:35%; /* aumenta no mobile */
-    
+  /* ---- RESPONSIVE ---- */
+  
+    @media (max-width: 720px){
+
+  .hero-frame{
+    aspect-ratio:4 / 5;
+    max-height:none;
+  }
+
+  .hero-frame::after{
+    height:35%;
     background:linear-gradient(
       to bottom,
       rgba(255,255,255,0) 0%,
@@ -468,15 +480,24 @@ transition:opacity .3s ease;  }
     );
   }
 
-}
-    .nav-inner{padding:22px 24px;}
-    .nav-logo{font-size:24px;}
-    .nav-links{gap:14px; font-size:12px;}
-    .oracle{padding:60px 20px 70px;}
-    .oracle-stage{height:280px;}
-.card{width:108px; height:168px;}
-    .card[data-index="0"]{
-  --rest: translateX(-70px) rotate(-10deg) !important;
+  .nav-inner{padding:22px 24px;}
+  .nav-logo{font-size:24px;}
+  .nav-links{gap:14px; font-size:12px;}
+
+  .card{width:108px; height:168px;}
+
+  .card[data-index="0"]{
+    --rest: translateX(-70px) rotate(-10deg) !important;
+  }
+
+  .card[data-index="1"]{
+    --rest: translateX(0) rotate(0deg) !important;
+  }
+
+  .card[data-index="2"]{
+    --rest: translateX(70px) rotate(10deg) !important;
+  }
+
 }
 
 .card[data-index="1"]{
