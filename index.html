@@ -452,7 +452,18 @@ transition:opacity .3s ease;  }
     .nav-links{gap:14px; font-size:12px;}
     .oracle{padding:60px 20px 70px;}
     .oracle-stage{height:280px;}
-    .card{width:118px; height:182px;}
+.card{width:108px; height:168px;}
+    .card[data-index="0"]{
+  --rest: translateX(-105px) rotate(-10deg) !important;
+}
+
+.card[data-index="1"]{
+  --rest: translateX(0) rotate(0deg) !important;
+}
+
+.card[data-index="2"]{
+  --rest: translateX(105px) rotate(10deg) !important;
+}
     .card-emoji{font-size:34px; margin-bottom:6px;}
     .card-name{font-size:11px;}
     .card-msg{font-size:8.5px; line-height:1.35;}
