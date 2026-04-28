@@ -438,9 +438,11 @@ transition:opacity .3s ease;  }
   /* ---- RESPONSIVE ---- */
  @media (max-width: 720px){
   .hero-frame{
-    aspect-ratio:4 / 5;
-    max-height:none;
-  }
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  max-height:none;
+}
 
   .hero-frame::after{
   height:28%; /* igual proporção do desktop */
