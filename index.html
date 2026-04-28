@@ -376,13 +376,14 @@ transition:opacity .3s ease;  }
 
   /* ---- FOOTER ---- */
   .footer{
-    background:var(--accent);
-    color:#fff;
-    padding:34px 0 28px;
-    position:relative;
-    overflow:hidden;
-    
-  .footer-row{
+  background:var(--accent);
+  color:#fff;
+  padding:34px 0 28px;
+  position:relative;
+  overflow:hidden;
+}
+
+.footer-row{
   max-width:var(--max);
   margin:0 auto;
   padding:0 28px;
@@ -435,8 +436,12 @@ transition:opacity .3s ease;  }
 
   /* ---- RESPONSIVE ---- */
   @media (max-width: 720px){
-    .hero-frame{aspect-ratio::after{
-    height:35%; /* aumenta no mobile */
+.hero-frame{
+  aspect-ratio:4 / 5;
+  max-height:none;
+}
+
+.hero-frame::after{    height:35%; /* aumenta no mobile */
     
     background:linear-gradient(
       to bottom,
