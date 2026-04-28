@@ -126,18 +126,36 @@
     justify-content:center;
     align-items:center;
   }
-  .card{
+  .card-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.card-face{
   position:absolute;
-  width:148px;
-  height:228px;
+  inset:0;
   border-radius:10px;
-  background:var(--card);
-  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity .35s ease;
+}
 
-  transform-style:preserve-3d;
-  transition:transform .7s cubic-bezier(.4,.0,.2,1);
+.card-back{
+  opacity:1;
+}
 
-  perspective:1000px; /* ADICIONA */
+.card-front{
+  opacity:0;
+}
+
+.card.flipped .card-back{
+  opacity:0;
+}
+
+.card.flipped .card-front{
+  opacity:1;
 }
   .card:hover:not(.disabled):not(.flipped){
     transform:var(--rest) translateY(-12px) scale(1.02);
