@@ -383,14 +383,21 @@ transition:opacity .3s ease;  }
     overflow:hidden;
   }
   .footer-row{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:0 28px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-  }
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* aqui */
+  text-align:center;
+}
+  .footer-logo-row{
+  max-width:var(--max);
+  margin:24px auto 0;
+  padding:0 28px;
+  display:flex;
+  justify-content:center; /* aqui */
+}
   .footer-loc{
     font-size:11px;
     letter-spacing:0.2em;
