@@ -134,7 +134,6 @@
     border-radius:10px;
     background:var(--card);
     cursor:pointer;
-    transform-style:preserve-3d;
     transition:
       transform .7s cubic-bezier(.4,.0,.2,1),
       box-shadow .4s ease,
@@ -192,6 +191,14 @@ transition:opacity .3s ease;  }
     text-align:center;
     color:#f5f5f5;
   }
+  .card.flipped .card-back{
+  opacity:0;
+}
+
+.card.flipped .card-front{
+  opacity:1;
+  pointer-events:auto;
+}
   .card-front::before{
     content:"";
     position:absolute;
@@ -460,9 +467,9 @@ transition:opacity .3s ease;  }
   <div class="nav-inner">
     <div class="nav-logo">Garnet</div>
     <div class="nav-links">
-      <a href="#wa.me/5531994781385">Contato</a>
-      <a href="#https://open.spotify.com/intl-pt/artist/73s2GQ5RqpEVqkVy94iiNM?si=cxiclkiNSTmaTI2MHGHtNg">Spotify</a>
-      <a href="#instagram.com/soul.garnet">Instagram</a>
+      <a href="wa.me/5531994781385">Contato</a>
+      <a href="https://open.spotify.com/intl-pt/artist/73s2GQ5RqpEVqkVy94iiNM?si=cxiclkiNSTmaTI2MHGHtNg">Spotify</a>
+      <a href="instagram.com/soul.garnet">Instagram</a>
     </div>
   </div>
 </nav>
@@ -524,8 +531,8 @@ transition:opacity .3s ease;  }
 <!-- ============= LIVE ============= -->
 <section class="live">
   <div class="live-img">
-    <img src="images/foto.png"  </div>
-  <div class="live-cap">GARNET É UMA ARTISTA REVELAÇÃO FORA DO EIXO</div>
+<img src="images/foto.png" alt="">
+</div>  <div class="live-cap">GARNET É UMA ARTISTA REVELAÇÃO FORA DO EIXO</div>
   <div class="live-bio">
     Com um som urbano e emocional que transita entre o R&amp;B e o rap, Garnet produz músicas que nascem da vivência real, do corpo e da rua. Criar é ocupar espaços com verdade.
   </div>
@@ -623,8 +630,7 @@ transition:opacity .3s ease;  }
       card.style.transition = "transform .8s cubic-bezier(.4,0,.2,1), box-shadow .5s ease";
       card.style.transform = "translateX(0) translateY(-10px) rotate(0deg) scale(1.06)";
       card.style.zIndex = "10";
-      setTimeout(()=> card.classList.add("flipped"), 350);
-    } else {
+card.classList.add("flipped");    } else {
       card.style.transform = "translateX(0) translateY(-10px) rotate(0deg) scale(1.06)";
       card.style.zIndex = "10";
       card.classList.add("flipped");
