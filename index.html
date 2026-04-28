@@ -447,6 +447,87 @@
     .footer-logo-row{padding:0 20px;}
     .footer-logo-wrap{width:260px;}
   }
+
+  /* FIX CARTAS ORÁCULO */
+.oracle-stage{
+  position:relative;
+  height:320px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:visible;
+}
+
+.card-deck{
+  position:relative;
+  width:540px;
+  max-width:92vw;
+  height:260px;
+  margin:0 auto;
+}
+
+.card{
+  position:absolute !important;
+  top:50% !important;
+  left:50% !important;
+  width:148px;
+  height:228px;
+  background:rgba(0,0,0,0.05) !important;
+  box-shadow:0 14px 30px rgba(0,0,0,0.12) !important;
+}
+
+.card:nth-child(1){
+  transform:translate(-50%, -50%) translateX(-150px) rotate(-8deg) !important;
+}
+
+.card:nth-child(2){
+  transform:translate(-50%, -50%) translateX(0) rotate(0deg) !important;
+}
+
+.card:nth-child(3){
+  transform:translate(-50%, -50%) translateX(150px) rotate(8deg) !important;
+}
+
+.card-back{
+  background:transparent !important;
+}
+
+.eye-img{
+  width:62%;
+  height:auto;
+  display:block;
+}
+
+/* MOBILE */
+@media (max-width:720px){
+  .oracle-stage{
+    height:250px;
+    overflow:visible;
+  }
+
+  .card-deck{
+    width:320px;
+    height:210px;
+  }
+
+  .card{
+    width:104px !important;
+    height:160px !important;
+  }
+
+  .card:nth-child(1){
+    transform:translate(-50%, -50%) translateX(-92px) rotate(-7deg) !important;
+  }
+
+  .card:nth-child(2){
+    transform:translate(-50%, -50%) translateX(0) rotate(0deg) !important;
+  }
+
+  .card:nth-child(3){
+    transform:translate(-50%, -50%) translateX(92px) rotate(7deg) !important;
+  }
+}
+  
 </style>
 </head>
 <body>
